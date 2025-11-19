@@ -172,18 +172,14 @@ class SmoothScroll {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (isTouchDevice()) {
-    console.log("Touch device detected: smooth scrolling disabled");
-    return; // skip initializing smooth scroll
-  }
-
   const smooth = new SmoothScroll({
     ease: 0.085,
     wrapper: ".smooth-scroll-wrapper",
     content: ".smooth-scroll-content",
-    header: ".mracc-header",
-    footer: ".mracc-footer"
+    header: ".mracc-header"
   });
   smooth.init();
+
+  // Expose for debugging in console:
   window.__smoothScroll = smooth;
 });

@@ -1,3 +1,25 @@
+function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (isTouchDevice()) {
+    console.log("Touch device detected: smooth scrolling disabled");
+    return; // skip initializing smooth scroll
+  }
+
+  const smooth = new SmoothScroll({
+    ease: 0.085,
+    wrapper: ".smooth-scroll-wrapper",
+    content: ".smooth-scroll-content",
+    header: ".mracc-header",
+    footer: ".mracc-footer"
+  });
+  smooth.init();
+  window.__smoothScroll = smooth;
+});
+
+
 class SmoothScroll {
   constructor(opts = {}) {
     this.ease = typeof opts.ease === 'number' ? opts.ease : 0.08;

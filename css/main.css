@@ -164,7 +164,7 @@ html,body {
   width: 100%;
   height: auto; /* Let the height scale automatically */
   max-height: 300px; /* Optional: prevent huge images on large screens */
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 0;
   display: block;
   transition: transform 0.3s ease;

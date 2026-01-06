@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE');
 
 
 
 :root {
 
-    --bgColor: #694d76;
+    --bgColor: #5d1689;
 
-    --bgColor2: #694d76;
+    --bgColor2: #5d1689;
 
     --accentColor: #fff;
 
-    --font: 'Archivo', sans-serif;
+    --font: 'SUSE', sans-serif;
 
     --font-stretch: expanded;
 
